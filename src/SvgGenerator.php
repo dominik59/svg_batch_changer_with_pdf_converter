@@ -17,35 +17,16 @@ class SvgGenerator
     private $outputPdfFolder = 'pdf';
     private $parametersToChange = [
         [
-            'MTASTKRB',
-            'ASTKMPMT',
-            'TKMTRBBB',
-            'POMWRBMP',
-            'MPKWMTTK',
-            'DSDPKGMS',
-            'BBGGMSRB',
-            'NZTKGGBB',
-            'POGPMBAS',
-            'MTMWKWKG',
-            'DPKGAOMW',
-            'MWGPJKMW',
-            'MBPOGGTK',
-            'DSKGKWAS',
-            'GGPOMBAO',
-            'GPAOPOJK',
-            'JKTKGPPO',
-            'JKGPAOKW',
-            'GGMBPOMW',
-            'GPMSKWAO',
-            'MBRBMTTK',
-            'GGRBTKKW',
-            'MWPOMTAS',
-            'MSMWAODS',
-            'POGGBBKG',
-            'MWPODSDP',
-            'DPKWBBGG',
-            'MWKWJKGP',
-            'GPJKMWKW',
+            'TKMTASNZ',
+            'KWAOGPRB',
+            'MBASNZPO',
+            'RBBBGPJK',
+            'TKASMSAO',
+            'MSGPJKGG',
+            'JKGPKWKG',
+            'ASDSRBNZ',
+            'AORGNZAS',
+            'RBAOAODP',
         ]
     ];
 
@@ -70,7 +51,7 @@ class SvgGenerator
         }
         if ($convertToPdf) {
             foreach ($this->listOfConvertedFilesNames as $fileName) {
-                exec('rsvg-convert -f pdf -o ' . $this->outputPdfFolder . '/' . $fileName . '.pdf ' . $this->outputSvgFolder . '/' . $fileName . '.svg');
+                exec('inkscape ' . $this->outputSvgFolder . '/' . $fileName . '.svg' . ' --export-pdf=' . $this->outputPdfFolder . '/' . $fileName . '.pdf');
             }
         }
 
