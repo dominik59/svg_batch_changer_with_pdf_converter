@@ -11,9 +11,12 @@ php script.php
 It will change Your previously set file and save it to location which You have set.
 
 You can make use from options below:
+
 | Option | What it matters |
-| ------ | ------ |
-| -c | Set on conversion to PDF each of new changed file |
+
+| ------ |     ------      |
+
+| -c     | Set on conversion to PDF each of new changed file |
 
 Example:
 ```
