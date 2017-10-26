@@ -58,9 +58,7 @@ class SvgGenerator
     public function run(bool $convertToPdf = false)
     {
         $loader = new Twig_Loader_Filesystem(__DIR__ . '/' . $this->templateFolder);
-        $twig = new Twig_Environment($loader, array(
-            'cache' => 'cache',
-        ));
+        $twig = new Twig_Environment($loader);
 
         foreach (range(0, $this->getMaxNumberOfParametersInGroups() - 1) as $rowNumber) {
             $parameters = $this->getParametersArrayForTwig($rowNumber);
@@ -75,6 +73,7 @@ class SvgGenerator
                 exec('rsvg-convert -f pdf -o ' . $this->outputPdfFolder . '/' . $fileName . '.pdf ' . $this->outputSvgFolder . '/' . $fileName . '.svg');
             }
         }
+
     }
 
     private function getMaxNumberOfParametersInGroups()
