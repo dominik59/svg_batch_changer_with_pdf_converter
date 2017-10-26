@@ -1,0 +1,35 @@
+<?php
+$array_of_codes = [
+    'MTASTKRB',
+    'ASTKMPMT',
+    'TKMTRBBB',
+    'POMWRBMP',
+    'MPKWMTTK',
+    'DSDPKGMS',
+    'BBGGMSRB',
+    'NZTKGGBB',
+    'POGPMBAS',
+    'MTMWKWKG',
+    'DPKGAOMW',
+    'MWGPJKMW',
+    'MBPOGGTK',
+    'DSKGKWAS',
+    'GGPOMBAO',
+    'GPAOPOJK',
+    'JKTKGPPO',
+    'JKGPAOKW',
+    'GGMBPOMW',
+    'GPMSKWAO',
+    'MBRBMTTK',
+    'GGRBTKKW',
+    'MWPOMTAS',
+    'MSMWAODS',
+    'POGGBBKG',
+    'MWPODSDP',
+    'DPKWBBGG',
+    'MWKWJKGP',
+    'GPJKMWKW',
+];
+foreach ($array_of_codes as $code) {
+    exec('rsvg-convert -f pdf -o pdf/' . $code . '.pdf svg/' . $code . '.svg');
+}

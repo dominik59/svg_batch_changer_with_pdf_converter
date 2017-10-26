@@ -1,0 +1,19 @@
+{
+  "name": "dominik/svg_mass_text_changer",
+  "description": "With that script You can batch exchange text in svg files and generate new svg files, then You can convert it to pdf filse",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Dominik Pawlik",
+      "email": "osemka59@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SvgGenerator\\": "src/"
+    }
+  },
+  "require": {
+    "twig/twig": "^2.0"
+  }
+}
